@@ -10,7 +10,6 @@ import qrcode
 import io
 import hashlib
 import json
-import os
 
 class Block:
     def __init__(self, index, timestamp, data, previous_hash):
@@ -95,57 +94,37 @@ st.markdown("""
 
 st.markdown('<h1 class="main-header">🐄 Sistem Tracing Produk Peternakan Halal</h1>', unsafe_allow_html=True)
 
-# Inisialisasi data dari CSV
+# Inisialisasi data
 if 'data' not in st.session_state:
-    if os.path.exists('data.csv'):
-        df = pd.read_csv('data.csv')
-        st.session_state['data'] = []
-        for _, row in df.iterrows():
-            entry = row.to_dict()
-            # Deserialize the 'data' field from JSON string back to dict
-            if 'data' in entry and isinstance(entry['data'], str):
-                try:
-                    entry['data'] = json.loads(entry['data'])
-                except json.JSONDecodeError:
-                    entry['data'] = {}
-            st.session_state['data'].append(entry)
-    else:
-        st.session_state['data'] = []
-        # Tambahkan contoh data
-        contoh_data = [
-            {
-                'produk_id': '123e4567-e89b-12d3-a456-426614174000',
-                'tahap': 'Peternak',
-                'data': {'peternak': 'Ahmad', 'asal_hewan': 'Farm A', 'jenis_pakan': 'Rumput', 'sertifikat_halal_pakan': 'Ya'},
-                'timestamp': datetime.now().isoformat(),
-                'batch_number': 'BATCH001',
-                'expiry_date': '2026-12-31'
-            },
-            {
-                'produk_id': '123e4567-e89b-12d3-a456-426614174000',
-                'tahap': 'Transportasi',
-                'data': {'transportir': 'Budi', 'jenis_kendaraan': 'Truck', 'kebersihan_kendaraan': 'Ya'},
-                'timestamp': datetime.now().isoformat(),
-                'batch_number': 'BATCH001',
-                'expiry_date': '2026-12-31'
-            },
-            {
-                'produk_id': '123e4567-e89b-12d3-a456-426614174000',
-                'tahap': 'Rumah Potong',
-                'data': {'rumah_potong': 'RPH Halal', 'juru_sembelih': 'Cici', 'proses_halal': 'Ya', 'sertifikat_halal_rph': 'Ya'},
-                'timestamp': datetime.now().isoformat(),
-                'batch_number': 'BATCH001',
-                'expiry_date': '2026-12-31'
-            }
-        ]
-        st.session_state['data'].extend(contoh_data)
-        # Save initial data
-        df_data = []
-        for entry in st.session_state['data']:
-            entry_copy = entry.copy()
-            entry_copy['data'] = json.dumps(entry['data'])
-            df_data.append(entry_copy)
-        pd.DataFrame(df_data).to_csv('data.csv', index=False)
+    st.session_state['data'] = []
+    # Tambahkan contoh data
+    contoh_data = [
+        {
+            'produk_id': '123e4567-e89b-12d3-a456-426614174000',
+            'tahap': 'Peternak',
+            'data': {'peternak': 'Ahmad', 'asal_hewan': 'Farm A', 'jenis_pakan': 'Rumput', 'sertifikat_halal_pakan': 'Ya'},
+            'timestamp': datetime.now().isoformat(),
+            'batch_number': 'BATCH001',
+            'expiry_date': '2026-12-31'
+        },
+        {
+            'produk_id': '123e4567-e89b-12d3-a456-426614174000',
+            'tahap': 'Transportasi',
+            'data': {'transportir': 'Budi', 'jenis_kendaraan': 'Truck', 'kebersihan_kendaraan': 'Ya'},
+            'timestamp': datetime.now().isoformat(),
+            'batch_number': 'BATCH001',
+            'expiry_date': '2026-12-31'
+        },
+        {
+            'produk_id': '123e4567-e89b-12d3-a456-426614174000',
+            'tahap': 'Rumah Potong',
+            'data': {'rumah_potong': 'RPH Halal', 'juru_sembelih': 'Cici', 'proses_halal': 'Ya', 'sertifikat_halal_rph': 'Ya'},
+            'timestamp': datetime.now().isoformat(),
+            'batch_number': 'BATCH001',
+            'expiry_date': '2026-12-31'
+        }
+    ]
+    st.session_state['data'].extend(contoh_data)
 
 if 'blockchain' not in st.session_state:
     st.session_state['blockchain'] = Blockchain()
@@ -238,13 +217,6 @@ if menu == "📝 Input Data":
         }
         st.session_state['data'].append(data_entry)
         st.session_state['blockchain'].add_block(data_entry)
-        # Save to CSV with 'data' field serialized to JSON
-        df_data = []
-        for entry in st.session_state['data']:
-            entry_copy = entry.copy()
-            entry_copy['data'] = json.dumps(entry['data'])
-            df_data.append(entry_copy)
-        pd.DataFrame(df_data).to_csv('data.csv', index=False)
         st.success(f"✅ Data tahap {tahap} untuk produk {produk_id} berhasil disimpan.")
         
         # Generate QR Code with complete data
