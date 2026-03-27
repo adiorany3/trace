@@ -1,0 +1,7 @@
+produk_id,tahap,data,timestamp,batch_number,expiry_date
+123e4567-e89b-12d3-a456-426614174000,Peternak,"{'peternak': 'Ahmad', 'asal_hewan': 'Farm A', 'jenis_pakan': 'Rumput', 'sertifikat_halal_pakan': 'Ya'}",2026-03-27T22:14:36.125744,,
+123e4567-e89b-12d3-a456-426614174000,Transportasi,"{'transportir': 'Budi', 'jenis_kendaraan': 'Truck', 'kebersihan_kendaraan': 'Ya'}",2026-03-27T22:14:36.125772,,
+123e4567-e89b-12d3-a456-426614174000,Rumah Potong,"{'rumah_potong': 'RPH Halal', 'juru_sembelih': 'Cici', 'proses_halal': 'Ya', 'sertifikat_halal_rph': 'Ya'}",2026-03-27T22:14:36.125773,,
+25a8b91c-3108-4074-ba0f-ba27142edca2,Peternak,"{'peternak': 'anak', 'asal_hewan': 'huni', 'jenis_pakan': 'rumput', 'sertifikat_halal_pakan': 'Ya'}",2026-03-27T22:14:59.318139,,
+ad92a2ca-d472-40a3-a041-a049ee1d5b78,Peternak,"{'peternak': 'Agus', 'asal_hewan': 'Jambi', 'jenis_pakan': 'Rumput segar', 'sertifikat_halal_pakan': 'Ya'}",2026-03-27T22:23:48.416923,,2026-03-27
+777764c8-f14c-49e8-a07d-c9a35b490b96,Peternak,"{'peternak': 'Percobaan', 'asal_hewan': 'jember', 'jenis_pakan': 'rumput', 'sertifikat_halal_pakan': 'Ya'}",2026-03-27T22:36:05.801401,,2026-03-27
