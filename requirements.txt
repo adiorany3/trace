@@ -1,7 +1,7 @@
-streamlit==1.28.1
-pandas==2.1.4
-opencv-python==4.8.1.78
-pyzbar==0.1.9
-pillow==10.1.0
-numpy==1.26.2
-qrcode[pil]==7.4.2
+streamlit
+pandas
+opencv-python
+pyzbar
+pillow
+numpy
+qrcode[pil]
