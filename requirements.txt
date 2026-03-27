@@ -1,7 +1,7 @@
 streamlit
 pandas
-opencv-python
 pyzbar
 pillow
 numpy
 qrcode[pil]
+opencv-python-headless==4.8.1.78
