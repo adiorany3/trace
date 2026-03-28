@@ -56,7 +56,7 @@ class Blockchain:
 st.set_page_config(
     page_title="CICI - Cinnamon Intelligent Coating Innovation",
     layout="wide",
-    page_icon="🐄",
+    page_icon="gambar/cici.jpeg",
     initial_sidebar_state="expanded"
 )
 
@@ -92,6 +92,9 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+
+# Tampilkan gambar cici.jpeg di header
+st.image("gambar/cici.jpeg", width=80)
 st.markdown('<h1 class="main-header">CICI - Cinnamon Intelligent Coating Innovation</h1>', unsafe_allow_html=True)
 
 # Inisialisasi data
