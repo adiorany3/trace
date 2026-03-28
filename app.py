@@ -92,7 +92,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<h1 class="main-header">🐄 CICI - Cinnamon Intelligent Coating Innovation</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-header">CICI - Cinnamon Intelligent Coating Innovation</h1>', unsafe_allow_html=True)
 
 # Inisialisasi data
 if 'data' not in st.session_state:
@@ -370,7 +370,7 @@ elif menu == "⛓️ Blockchain":
 elif menu == "ℹ️ Informasi Sistem":
     st.header("ℹ️ Informasi Sistem")
     st.markdown("""
-    ### 🐄 CICI - Cinnamon Intelligent Coating Innovation
+    ### CICI - Cinnamon Intelligent Coating Innovation
     
     **Deskripsi:**
     Sistem ini dirancang untuk melacak produk peternakan halal dari peternak hingga konsumen menggunakan teknologi blockchain untuk memastikan integritas data.
