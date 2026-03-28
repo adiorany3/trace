@@ -54,7 +54,7 @@ class Blockchain:
         return True
 
 st.set_page_config(
-    page_title="Sistem Tracing Produk Peternakan Halal",
+    page_title="CICI - Cinnamon Intelligent Coating Innovation",
     layout="wide",
     page_icon="🐄",
     initial_sidebar_state="expanded"
@@ -92,7 +92,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<h1 class="main-header">🐄 Sistem Tracing Produk Peternakan Halal</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-header">🐄 CICI - Cinnamon Intelligent Coating Innovation</h1>', unsafe_allow_html=True)
 
 # Inisialisasi data
 if 'data' not in st.session_state:
@@ -370,7 +370,7 @@ elif menu == "⛓️ Blockchain":
 elif menu == "ℹ️ Informasi Sistem":
     st.header("ℹ️ Informasi Sistem")
     st.markdown("""
-    ### 🐄 Sistem Tracing Produk Peternakan Halal
+    ### 🐄 CICI - Cinnamon Intelligent Coating Innovation
     
     **Deskripsi:**
     Sistem ini dirancang untuk melacak produk peternakan halal dari peternak hingga konsumen menggunakan teknologi blockchain untuk memastikan integritas data.
@@ -457,7 +457,7 @@ elif menu == "ℹ️ Informasi Sistem":
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #666; padding: 20px;">
-    <p>© 2026 Sistem Tracing Produk Peternakan Halal</p>
-    <p><em>Sistem masih dalam tahap prototype</em></p>
+    <p>© 2026 CICI - Cinnamon Intelligent Coating Innovation</p>
+    <p><em>Bismillah Cukurucoat Menang - Fakultas Peternakan UGM</em></p>
 </div>
 """, unsafe_allow_html=True)
