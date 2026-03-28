@@ -93,9 +93,13 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# Tampilkan gambar cici.jpeg di header
-st.image("gambar/cici.jpeg", width=80)
-st.markdown('<h1 class="main-header">CICI - Cinnamon Intelligent Coating Innovation</h1>', unsafe_allow_html=True)
+
+# Tampilkan gambar cici.jpeg di samping judul header
+header_col1, header_col2 = st.columns([1, 6])
+with header_col1:
+    st.image("gambar/cici.jpeg", width=70)
+with header_col2:
+    st.markdown('<h1 class="main-header" style="margin-top: 15px;">CICI - Cinnamon Intelligent Coating Innovation</h1>', unsafe_allow_html=True)
 
 # Inisialisasi data
 if 'data' not in st.session_state:
