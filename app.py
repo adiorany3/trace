@@ -151,7 +151,7 @@ st.sidebar.metric("Total Entri", total_entries)
 st.sidebar.metric("Blockchain Status", "Valid ✅" if blockchain_valid else "Invalid ❌")
 
 st.sidebar.markdown("---")
-st.sidebar.caption("Sistem Tracing Produk Halal v1.0")
+st.sidebar.caption("Cinnamon Intelligent Coating Innovation v1.0")
 st.sidebar.caption("Dikembangkan dengan Python, Streamlit & Blockchain")
 
 # Main content based on menu
