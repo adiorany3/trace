@@ -150,7 +150,7 @@ if 'blockchain' not in st.session_state:
         st.session_state['blockchain'].add_block(entry)
 
 # Sidebar navigation
-st.sidebar.title("🐄 Menu Navigasi")
+st.sidebar.title("Menu Navigasi")
 menu = st.sidebar.radio(
     "Pilih Fitur:",
     ["📝 Input Data", "🔍 Tracing Produk", "⛓️ Blockchain", "ℹ️ Informasi Sistem"],
