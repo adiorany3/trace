@@ -97,15 +97,10 @@ st.markdown("""
 
 # Header dengan gambar dan judul sejajar, rata tengah, dan desain lebih baik
 header_col1, header_col2 = st.columns([1, 10])
+import os
 with header_col1:
-    st.markdown(
-        f"""
-        <div style='display: flex; align-items: center; justify-content: center; height: 100%;'>
-            <img src='gambar/cici.jpeg' width='70' style='border-radius: 12px; box-shadow: 0 2px 8px #ccc; margin: 6px 0 6px 0;'/>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    # Gunakan st.image agar path lokal bisa terbaca oleh Streamlit
+    st.image(os.path.join("gambar", "cici.jpeg"), width=70, caption=None)
 with header_col2:
     st.markdown(
         """
